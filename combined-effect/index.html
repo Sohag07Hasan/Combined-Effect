@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<!-- Jquery form google -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>		
+		
+		<!-- Lean Modal -->
+		<script src="./assets/lean-modal/jquery.leanModal.min.js"></script>	
+		
+		<!-- flip modal with ui -->
+		<script src="./assets/flip/jquery.flip.min.js"></script>
+		<script src="./assets/jquery-ui/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<link rel="stylesheet" href="./assets/jquery-ui/css/ui-lightness/jquery-ui-1.10.3.custom.min.css" >
+		
+		<!-- self written -->
+		<script src="./js/controller-script.js"></script>		
+		<link rel="stylesheet" type="text/css" href="./css/controller-style.css">
+		
+	</head>
+	
+	<body>
+		
+		<div id="lean-modal-container" style="display: none">
+		    <a href="#" class="modal_close">close</a>
+		    
+		   <div class="flip-container">
+				<div class="flipper">		
+					<div class="front">
+						 <img class="flip-image" src="./images/mangos.jpg" alt="Unavailable" />						
+					</div>
+					
+					<div class="back">
+						<img class="flip-image" src="./images/ripemangos.jpg" alt="Unavailable" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="clear"></div>
+			
+			<div class="modal-navigation-image-contaier">
+				<img class="nav-image nav-selected" src="./images/mangos.jpg" alt="Unavailable" />
+				<img class="nav-image" src="./images/ripemangos.jpg" alt="Unavailable" />
+			</div>						
+		</div>
+		
+		<p><a href="#lean-modal-container" id="modal-starter">Start!</a></p>
+		
+	</body>
+	
+</html>

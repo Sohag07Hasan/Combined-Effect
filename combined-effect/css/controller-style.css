@@ -1,0 +1,59 @@
+#lean_overlay{
+	position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+
+
+.flip-container{
+	overflow: hidden;	
+	text-align: center;
+	vertical-align: baseline;
+}
+
+img.flip-image{
+	height: 305px;
+	width: 305px;
+	border: 2px solid #E6E6FA;
+	cursor: pointer;
+	
+}
+
+.modal-navigation-image-contaier{
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	margin-top: 10px;
+}
+
+.nav-image{
+	width: 40px;
+	height: 40px;
+	padding: 2px;
+	border: 1px solid #E6E6FA;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+img.nav-selected{
+	opacity: 1;
+}
+
+.clear{
+	clear: both;
+}
+
+.flip-container, .front, .back {
+	height: 320px;
+	width: 320px;
+}
+
+div.front{
+	visibility: visible;
+	z-index: 10;
+}

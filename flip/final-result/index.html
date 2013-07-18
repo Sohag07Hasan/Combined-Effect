@@ -1,0 +1,56 @@
+<html>
+
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="jquery.flip.min.js"></script>
+		<script src="jquery-ui/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<link rel="stylesheet" href="jquery-ui/css/ui-lightness/jquery-ui-1.10.3.custom.min.js" >		
+		
+		<style type="text/css">
+			body{
+				text-align: center;
+			}
+			.flipbox{
+				height: 300px;
+				width: 300px;
+				background-color: red;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		
+		<div class="flipbox">
+			Hello
+		</div>
+		
+		<script type="text/javascript">
+			jQuery('.flipbox').bind('click', function(){
+				/*
+				$('.flipbox').flip({
+					direction:'lr',
+					content:'this is my new content'
+				});
+				*/
+				
+				$(".flipbox").flip({
+					direction:'lr',
+					onBefore: function(){
+							console.log('before starting the animation');
+					},
+					onAnimation: function(){
+							console.log('in the middle of the animation');
+					},
+					onEnd: function(){
+							console.log('when the animation has already ended');
+					}
+				});
+				
+				
+			});
+		</script>
+		
+	</body>
+
+</html>
