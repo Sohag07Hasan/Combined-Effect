@@ -17,11 +17,18 @@
 }
 
 img.flip-image{
-	height: 305px;
-	width: 305px;
+	
+	height: 100%;
+	width: 100%;
 	border: 2px solid #E6E6FA;
 	cursor: pointer;
 	
+	/*
+	background:url(../images/mangos.jpg);
+	background-size:305px 305px;
+	background-repeat:no-repeat;
+	z-index: 1000;
+	*/ 	
 }
 
 .modal-navigation-image-contaier{
@@ -40,7 +47,7 @@ img.flip-image{
 	opacity: 0.5;
 }
 
-img.nav-selected{
+img.nav-selected, img.nav-image:hover{
 	opacity: 1;
 }
 
@@ -49,11 +56,46 @@ img.nav-selected{
 }
 
 .flip-container, .front, .back {
-	height: 320px;
-	width: 320px;
+	height: 400px;
+	width: 400px;
 }
 
 div.front{
 	visibility: visible;
 	z-index: 10;
+	text-align: left;
+	vertical-align: baseline;
+	
 }
+
+table.modal-table{
+    padding: 10px;
+    font-size: 20px;
+}
+
+table.modal-table td{
+    padding: 3px 5px 5px 5px;
+}
+
+form.modal-form input{
+    height: 30px;
+}
+
+h2.modal-title{
+    font-size: 24px;
+    padding: 5px 5px 3px 15px;
+}
+
+form.modal-form input.modal-submit{
+	height: 40px;
+	width: 90px;
+	background-color: #E5E5E5;
+	cursor: pointer;
+	font-size: 18px;
+	margin-left: 15px;
+}
+
+form.modal-form input.modal-submit:hover{	
+	background-color: #BFBFBF;
+}
+
