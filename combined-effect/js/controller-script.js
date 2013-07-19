@@ -10,23 +10,23 @@ jQuery(document).ready(function($){
 	});
 	
 	
-	//flip and revert
-	
-	
-	$('.flip-flip').bind('click', function(){		
-		$('.front').css({'background-color':'#BFBFBF'});
 		
+	$('.flip-flip').bind('click', function(){
+				
+		$('.front').css({'background-color':'#BFBFBF'});		
 		var img_src = $('img#flip-big-image').attr('src');
 		$('input[name="selected-image-src"]').attr('value', img_src);
 		
-		var form_content = $('.back').html();
+		var back_content = $('.back').html();
+		var front_content = $('.front').html();
+		$('.back').html(front_content);
 		
 		$(".front").flip({
 			direction:'lr',
 			color: '#BFBFBF',
 			speed: 100,
 			//content:'<img class="flip-image" src="./images/ripemangos.jpg" alt="Unavailable" />',
-			content: form_content
+			content: back_content
 		});
 		
 		//undo flipping
