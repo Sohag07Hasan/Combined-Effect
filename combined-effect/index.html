@@ -25,8 +25,7 @@
 		<div id="lean-modal-container" style="display: none">
 		    <!--  <a href="#" class="modal_close">Close</a> &nbsp; -->
 		    <a href="#" class="flip-flip">Flip!</a>
-		    <a href="#" class="flip-revert">Revert!</a>
-		    
+		    		    
 		   <div class="flip-container">
 				<div class="flipper">		
 					<div class="front">
@@ -34,31 +33,42 @@
 					</div>
 									
 					<div class="back" style="display: none">
-						<h2 class="modal-title">Create a new account</h2>
-						<form action="" method="post" class="modal-form">
-							
-							<input type="hidden" name="selected-image-src" value="" />
-							
-							<table class="modal-table">
-								<tr>
-									<td>Username</td>
-									<td><input type="text" name="username"></td>
-								</tr>
-								<tr>
-									<td>Email</td>
-									<td><input type="text" name="email"></td>
-								</tr>
-								<tr>
-									<td>Password</td>
-									<td><input type="password" name="password"></td>
-								</tr>
+						<div class="modal-form-container">
+							<h2 class="modal-title">Create a new account</h2>
+							<form action="" method="post" class="modal-form">
 								
-							</table>											
+								<input type="hidden" name="selected-image-src" value="" />
+								
+								<table class="modal-table">
+									<tr>
+										<td>Username</td>
+										<td><input type="text" name="username"></td>
+									</tr>
+									<tr>
+										<td>Email</td>
+										<td><input type="text" name="email"></td>
+									</tr>
+									<tr>
+										<td>Password</td>
+										<td><input type="password" name="password"></td>
+									</tr>
+									
+								</table>											
+								
+								<p><input class="modal-submit modal_close" type="button" value="Signup"></p>
+								
+							</form>
 							
-							<p><input class="modal-submit" type="submit" value="Singup"></p>
+							<script type="text/javascript">
+							function close_modal(modal_id){$("#lean_overlay").fadeOut(200);$(modal_id).css({"display":"none"})}
+								jQuery('.modal-submit').on('click', function(){
+									var modal_id = $('#modal-starter').attr('href');
+									close_modal(modal_id);
+									$('.modal-form').submit();
+								});
+							</script>
 							
-						</form>
-						
+						</div>
 					</div>
 					
 				</div>

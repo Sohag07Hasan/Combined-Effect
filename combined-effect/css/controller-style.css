@@ -16,19 +16,16 @@
 	vertical-align: baseline;
 }
 
-img.flip-image{
-	
+img.flip-image{	
 	height: 100%;
 	width: 100%;
-	border: 2px solid #E6E6FA;
+	/*border: 2px solid #E6E6FA; */
 	cursor: pointer;
-	
-	/*
-	background:url(../images/mangos.jpg);
-	background-size:305px 305px;
-	background-repeat:no-repeat;
-	z-index: 1000;
-	*/ 	
+}
+
+div.modal-form-container{
+	width: 100%;
+	height: 100%;
 }
 
 .modal-navigation-image-contaier{
@@ -98,4 +95,5 @@ form.modal-form input.modal-submit{
 form.modal-form input.modal-submit:hover{	
 	background-color: #BFBFBF;
 }
+
 

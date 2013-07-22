@@ -1,6 +1,8 @@
 jQuery(document).ready(function($){
 	$("#modal-starter").leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });
 	
+	
+		
 	//navigation
 	$('.nav-image').bind('click', function(){
 		$('img.nav-image').removeClass('nav-selected');
@@ -20,15 +22,21 @@ jQuery(document).ready(function($){
 		var back_content = $('.back').html();
 		var front_content = $('.front').html();
 		$('.back').html(front_content);
-		
+				
+				
 		$(".front").flip({
 			direction:'lr',
 			color: '#BFBFBF',
 			speed: 100,
 			//content:'<img class="flip-image" src="./images/ripemangos.jpg" alt="Unavailable" />',
-			content: back_content
+			content: back_content,
+			
+			onAnimation: function(){
+				$('.modal-navigation-image-contaier').toggle();
+			}
 		});
 		
+				
 		//undo flipping
 		$('.flip-revert').bind('click', function(){
 			$('.front').css({'background':'none'});
@@ -36,9 +44,14 @@ jQuery(document).ready(function($){
 		});
 		
 		return false;
+		
+		/*
+		$('#modal-form-submitter-button').on('click', function(){
+			alert('a');
+		});
+		*/	
 				
 	});
-	
 	
 	
 	
